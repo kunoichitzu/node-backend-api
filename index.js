@@ -17,6 +17,10 @@ const API_GLPI='http://20.232.159.226/apirest.php/Ticket'
 
 const API_GLPI_SESSION ='http://20.232.159.226/apirest.php/initSession'
 
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
 app.post('/completions',  async ( req, res)=>{
 
     const prompt = {role: "system", content: PROMPT_GPT}
